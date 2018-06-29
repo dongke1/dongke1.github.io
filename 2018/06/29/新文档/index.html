@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | a-lazy-lunch</title>
+  <title>a-lazy-lunch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
+<meta property="og:type" content="article">
 <meta property="og:title" content="a-lazy-lunch">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/06/29/新文档/index.html">
 <meta property="og:site_name" content="a-lazy-lunch">
+<meta property="og:description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-29T13:58:45.629Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="a-lazy-lunch">
+<meta name="twitter:description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
   
     <link rel="alternative" href="/atom.xml" title="a-lazy-lunch" type="application/atom+xml">
   
@@ -151,97 +155,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-新文档" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="用hexo-gitbox创建个人博客"><a href="#用hexo-gitbox创建个人博客" class="headerlink" title="用hexo+gitbox创建个人博客"></a>用hexo+gitbox创建个人博客<br></h1><blockquote>
+<h1 id="安装软件和配置环境"><a href="#安装软件和配置环境" class="headerlink" title="安装软件和配置环境"></a>安装软件和配置环境</h1></blockquote>
+<blockquote>
+<blockquote>
+<p>1.注册gitbox账号和创建gitbox上的仓库<br><br>2.安装git，node.js和hexo<br><br>3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<h1 id="与github建立联系"><a href="#与github建立联系" class="headerlink" title="与github建立联系"></a>与github建立联系</h1></blockquote>
+<blockquote>
+<blockquote>
+<p>我们如何让本地git项目与远程的github建立联系呢？用 SSH keys<br>1、生成SSH keys<br>在命令行中使用如下命令输入你自己的邮箱地址（不管你是在CMD命令行中执行，还是右键选择Git Bash Here进入来执行都可以）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxx@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、添加 SSH Key 到 GitHub<br><br>打开 C:\Users\木木.ssh\id_rsa.pub，此文件里面内容为刚才生成的密钥，准确的复制这个文件里的内容，粘贴到<br><a href="https://github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a> 的 new SSH key 中<br>3、测试是否添加成功<br>可以输入下面的命令，看看设置是否成功，<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>的部分不要修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<h1 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h1><blockquote>
+<p>通过 SSH 链接到 GitHub<br>Git 会根据用户的名字和邮箱来记录提交。<br>GitHub 也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的。<br><figure class="highlight plain"><figcaption><span>config --global user.name "xxxxx"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;xxxxx@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>配置 Deployment<br>在_config.yml文件中(此文件在你创建好的Hexo站点目录中)，找到Deployment，然后按照如下修改，用户名改成你自己的GitHub信息：<br>一般冒号后面得空一格！（不知道为什么）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:dongke1/dongke1.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>hexo g<br><br>//开始部署<br>hexo d<br>如果没有错误产生，此时你本地的代码就已经上传到了Github中。</p>
+</blockquote>
+<h1 id="使用markdownpad写博客和发布"><a href="#使用markdownpad写博客和发布" class="headerlink" title="使用markdownpad写博客和发布"></a>使用markdownpad写博客和发布</h1><blockquote>
+<p>安装markdownpad和插件，要不然不能显示你在里面写的内容。<br><br>markdownpad语法看网上教程。<br>最后将写好的文档保存到你的本地blog/source/_posts(前面的工作要弄的东西，就不说了）下面。<br>最后就是发布了，ctrl+r  cmd,进入blog下<br>hexo server可以先预览一下，感觉没问题就可以发布了<br>hexo d你就可以看到你的文章了。</p>
+</blockquote>
+</blockquote>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/29/新文档/" class="archive-article-date">
-  	<time datetime="2018-06-29T12:34:57.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/29/新文档/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/很开心-这一天/" class="archive-article-date">
-  	<time datetime="2018-06-28T08:09:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/28/很开心-这一天/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">很开心 这一天</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/很开心-这一天/">很开心 这一天</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/28/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-28T07:51:05.975Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/28/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -264,8 +348,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
