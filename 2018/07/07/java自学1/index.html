@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>创建博客 | a-lazy-lunch</title>
+  <title>java集合Map：HashMap实现 | a-lazy-lunch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
+  <meta name="description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
 <meta property="og:type" content="article">
-<meta property="og:title" content="创建博客">
-<meta property="og:url" content="http://yoursite.com/2018/06/29/第一篇博客/index.html">
+<meta property="og:title" content="java集合Map：HashMap实现">
+<meta property="og:url" content="http://yoursite.com/2018/07/07/java自学1/index.html">
 <meta property="og:site_name" content="a-lazy-lunch">
-<meta property="og:description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
+<meta property="og:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-29T14:34:50.464Z">
+<meta property="og:updated_time" content="2018-07-07T09:09:24.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="创建博客">
-<meta name="twitter:description" content="用hexo+gitbox创建个人博客 安装软件和配置环境   1.注册gitbox账号和创建gitbox上的仓库2.安装git，node.js和hexo3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）    与github建立联系   我们如何让本地git项目与远程的github建立联系呢？用 SSH keys1、生成SSH keys在命令行中使用如下命令输入你自己的邮箱地址">
+<meta name="twitter:title" content="java集合Map：HashMap实现">
+<meta name="twitter:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
   
     <link rel="alternative" href="/atom.xml" title="a-lazy-lunch" type="application/atom+xml">
   
@@ -155,63 +155,41 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-java自学1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      创建博客
+      java集合Map：HashMap实现
     </h1>
   
 
         
-        <a href="/2018/06/29/第一篇博客/" class="archive-article-date">
-  	<time datetime="2018-06-29T12:34:57.530Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-29</time>
+        <a href="/2018/07/07/java自学1/" class="archive-article-date">
+  	<time datetime="2018-07-07T06:43:28.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="用hexo-gitbox创建个人博客"><a href="#用hexo-gitbox创建个人博客" class="headerlink" title="用hexo+gitbox创建个人博客"></a>用hexo+gitbox创建个人博客<br></h1><blockquote>
-<h1 id="安装软件和配置环境"><a href="#安装软件和配置环境" class="headerlink" title="安装软件和配置环境"></a>安装软件和配置环境</h1></blockquote>
-<blockquote>
-<blockquote>
-<p>1.注册gitbox账号和创建gitbox上的仓库<br><br>2.安装git，node.js和hexo<br><br>3.装好后要配置好git和hexo环境。（不懂的,有问题的看网上教程）</p>
+        <h1 id="基础认识"><a href="#基础认识" class="headerlink" title="基础认识"></a>基础认识</h1><blockquote>
+<p>1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。</p>
+<p>2.hashMap底层结构：数组+链表+红黑树</p>
+<p>3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。</p>
+<p>4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很快的访问速度。</p>
+<p>5.hashMap只允许一条记录的键为空，允许多条记录的值为空。</p>
+<p>6.hashMap非线程安全，即任意时刻可以有多个线程同时写hashMap.</p>
+<p>7.Hashtable:它与hashMap很相似，但是它是线程安全的。</p>
 </blockquote>
+<h1 id="结构认识"><a href="#结构认识" class="headerlink" title="结构认识"></a>结构认识</h1><blockquote>
+<p>1.存储字段Node&lt;k,v&gt;,用的哈希桶数组。<br>2.hashMap是用哈希表存储。即每个数组元素都是一个链表结构，当数据被hash后，得到数组下标，把数据放在对应下标元素的链表上。<br><code>map.put(&quot;1&quot;,&quot;小黑&quot;);</code><br>系统通过调用“1”，这个key值的hashCode()方法得到hashCode值，通过Hash算法运算得到该键值的存储位置。</p>
 </blockquote>
-<blockquote>
-<h1 id="与github建立联系"><a href="#与github建立联系" class="headerlink" title="与github建立联系"></a>与github建立联系</h1></blockquote>
-<blockquote>
-<blockquote>
-<p>我们如何让本地git项目与远程的github建立联系呢？用 SSH keys<br>1、生成SSH keys<br>在命令行中使用如下命令输入你自己的邮箱地址（不管你是在CMD命令行中执行，还是右键选择Git Bash Here进入来执行都可以）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxxx@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>2、添加 SSH Key 到 GitHub<br><br>打开 C:\Users\木木.ssh\id_rsa.pub，此文件里面内容为刚才生成的密钥，准确的复制这个文件里的内容，粘贴到<br><a href="https://github.com/settings/ssh" target="_blank" rel="noopener">https://github.com/settings/ssh</a> 的 new SSH key 中<br>3、测试是否添加成功<br>可以输入下面的命令，看看设置是否成功，<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>的部分不要修改：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<h1 id="配置Git个人信息"><a href="#配置Git个人信息" class="headerlink" title="配置Git个人信息"></a>配置Git个人信息</h1><blockquote>
-<p>通过 SSH 链接到 GitHub<br>Git 会根据用户的名字和邮箱来记录提交。<br>GitHub 也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的。<br><figure class="highlight plain"><figcaption><span>config --global user.name "xxxxx"</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;xxxxx@qq.com&quot;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>配置 Deployment<br>在_config.yml文件中(此文件在你创建好的Hexo站点目录中)，找到Deployment，然后按照如下修改，用户名改成你自己的GitHub信息：<br>一般冒号后面得空一格！（不知道为什么）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:dongke1/dongke1.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>hexo g<br><br>//开始部署<br>hexo d<br>如果没有错误产生，此时你本地的代码就已经上传到了Github中。</p>
-</blockquote>
-<h1 id="使用markdownpad写博客和发布"><a href="#使用markdownpad写博客和发布" class="headerlink" title="使用markdownpad写博客和发布"></a>使用markdownpad写博客和发布</h1><blockquote>
-<p>安装markdownpad和插件，要不然不能显示你在里面写的内容。<br><br>markdownpad语法看网上教程。<br>最后将写好的文档保存到你的本地blog/source/_posts(前面的工作要弄的东西，就不说了）下面。<br>最后就是发布了，ctrl+r  cmd,进入blog下<br>hexo server可以先预览一下，感觉没问题就可以发布了<br>hexo d你就可以看到你的文章了。</p>
-</blockquote>
-</blockquote>
+<h1 id="方法认识"><a href="#方法认识" class="headerlink" title="方法认识"></a>方法认识</h1><p>`</p>
+<p><code></code><br>Map map=new HashMap();<br>Map.put(“id”,123);</p>
+<p>`</p>
 
       
 
@@ -291,7 +269,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/29/第一篇博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/07/java自学1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -305,15 +283,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/07/java自学1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/07/java自学2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java集合Map：HashMap实现
+          java集合set：hashset实现
         
       </div>
     </a>
   
+  
+    <a href="/2018/06/29/第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">创建博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
