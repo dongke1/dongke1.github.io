@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java集合Map：HashMap实现 | a-lazy-lunch</title>
+  <title>迭代器（iterator）实现list和set遍历 | a-lazy-lunch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
+  <meta name="description" content="public static void main(Stringp[] args){ List list=new ArryList(); list.add(&amp;quot;123&amp;quot;); list.add(&amp;quot;abd&amp;quot;); for(Iterator iter2=list.iteratot();iter2.hashNext())  //通过迭代器遍历list {      Stri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java集合Map：HashMap实现">
-<meta property="og:url" content="http://yoursite.com/2018/07/07/java自学1/index.html">
+<meta property="og:title" content="迭代器（iterator）实现list和set遍历">
+<meta property="og:url" content="http://yoursite.com/2018/07/07/补充2/index.html">
 <meta property="og:site_name" content="a-lazy-lunch">
-<meta property="og:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
+<meta property="og:description" content="public static void main(Stringp[] args){ List list=new ArryList(); list.add(&amp;quot;123&amp;quot;); list.add(&amp;quot;abd&amp;quot;); for(Iterator iter2=list.iteratot();iter2.hashNext())  //通过迭代器遍历list {      Stri">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-07T15:05:18.402Z">
+<meta property="og:updated_time" content="2018-07-07T15:32:14.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java集合Map：HashMap实现">
-<meta name="twitter:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
+<meta name="twitter:title" content="迭代器（iterator）实现list和set遍历">
+<meta name="twitter:description" content="public static void main(Stringp[] args){ List list=new ArryList(); list.add(&amp;quot;123&amp;quot;); list.add(&amp;quot;abd&amp;quot;); for(Iterator iter2=list.iteratot();iter2.hashNext())  //通过迭代器遍历list {      Stri">
   
     <link rel="alternative" href="/atom.xml" title="a-lazy-lunch" type="application/atom+xml">
   
@@ -155,55 +155,44 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java自学1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-补充2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java集合Map：HashMap实现
+      迭代器（iterator）实现list和set遍历
     </h1>
   
 
         
-        <a href="/2018/07/07/java自学1/" class="archive-article-date">
-  	<time datetime="2018-07-07T06:43:28.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-07</time>
+        <a href="/2018/07/07/补充2/" class="archive-article-date">
+  	<time datetime="2018-07-07T15:11:29.325Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="基础认识"><a href="#基础认识" class="headerlink" title="基础认识"></a>基础认识</h1><blockquote>
-<p>1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。</p>
-<p>2.hashMap底层结构：数组+链表+红黑树</p>
-<p>3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。</p>
-<p>4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很快的访问速度。</p>
-<p>5.hashMap只允许一条记录的键为空，允许多条记录的值为空。</p>
-<p>6.hashMap非线程安全，即任意时刻可以有多个线程同时写hashMap.</p>
-<p>7.Hashtable:它与hashMap很相似，但是它是线程安全的。</p>
-</blockquote>
-<h1 id="结构认识"><a href="#结构认识" class="headerlink" title="结构认识"></a>结构认识</h1><blockquote>
-<p>1.存储字段Node&lt;k,v&gt;,用的哈希桶数组。<br>2.hashMap是用哈希表存储。即每个数组元素都是一个链表结构，当数据被hash后，得到数组下标，把数据放在对应下标元素的链表上。<br><code>map.put(&quot;1&quot;,&quot;小黑&quot;);</code><br>系统通过调用“1”，这个key值的hashCode()方法得到hashCode值，通过Hash算法运算得到该键值的存储位置。</p>
-</blockquote>
-<h1 id="方法认识"><a href="#方法认识" class="headerlink" title="方法认识"></a>方法认识</h1><figure class="highlight plain"><figcaption><span>class Employee</span><a href="//实体类">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	public int id;</span><br><span class="line">	public String name;	</span><br><span class="line">	public void Employee(int id,String name)</span><br><span class="line"> &#123;</span><br><span class="line">  super();</span><br><span class="line">  this.id=id;</span><br><span class="line">  this.name=name;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code>public static void main(String[] args)
-    {
-        Map map=new HashMap();
-        map.put(&quot;id&quot;,123);
-        map.put(&quot;name&quot;,张三);
-
-        list&lt;Map&gt; list=new ArryList&lt;Map&gt;();
-        list.add(map);
-        printEmpName(list);
+        <pre><code>public static void main(Stringp[] args){
+List list=new ArryList();
+list.add(&quot;123&quot;);
+list.add(&quot;abd&quot;);
+for(Iterator iter2=list.iteratot();iter2.hashNext())  //通过迭代器遍历list
+{
+     String str=(String) iter2.next();
+    System.out.println(str);
+    itre2.remove();                                  //删除
 }
-  public static void printEmpName(list&lt;Map&gt; list){
-    for(int i=0;i&lt;list&gt;.size();i++)    
-    {
-    Map tempMap=list.get(i);
-    System.out.println(tempMap.get(&quot;id&quot;)+&quot;--&quot;+tempMap.get(&quot;name&quot;));
-    }
+
+Set set=new hashSet();                        //通过迭代器遍历set
+set.add(&quot;123&quot;);
+set.add(&quot;ad&quot;);
+Iterator iter=set.iterator();
+while(iter.hashNext()){
+String str=(String iter.next();
+System.out.println(str);
 }
 </code></pre>
       
@@ -284,7 +273,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/07/java自学1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/07/07/补充2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,18 +287,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/07/07/java自学2/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/07/java自学4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java集合set：hashset实现
+          泛型使用
         
       </div>
     </a>
   
   
-    <a href="/2018/06/29/第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">创建博客</div>
+    <a href="/2018/07/07/补充1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">知识补充1：数组和集合</div>
       <i class="icon-circle-right"></i>
     </a>
   
