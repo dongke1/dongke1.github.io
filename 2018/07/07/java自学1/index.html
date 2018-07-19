@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="a-lazy-lunch">
 <meta property="og:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-07T15:05:18.402Z">
+<meta property="og:updated_time" content="2018-07-19T12:02:18.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java集合Map：HashMap实现">
 <meta name="twitter:description" content="基础认识 1.hash相当于把值映射到另一个空间。HashMap是程序员常用的映射（键值对）处理的数据类型。 2.hashMap底层结构：数组+链表+红黑树 3.java中定义了一个接口：java.util.Map，可以实现    HashMap,Hashtable，linkedHashMap和treeMap。 4.HashMap：它根据键的hashCode值存储数据，可以直接定位到值,因 此有很">
@@ -184,6 +184,7 @@
 <p>6.hashMap非线程安全，即任意时刻可以有多个线程同时写hashMap.</p>
 <p>7.Hashtable:它与hashMap很相似，但是它是线程安全的。</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="结构认识"><a href="#结构认识" class="headerlink" title="结构认识"></a>结构认识</h1><blockquote>
 <p>1.存储字段Node&lt;k,v&gt;,用的哈希桶数组。<br>2.hashMap是用哈希表存储。即每个数组元素都是一个链表结构，当数据被hash后，得到数组下标，把数据放在对应下标元素的链表上。<br><code>map.put(&quot;1&quot;,&quot;小黑&quot;);</code><br>系统通过调用“1”，这个key值的hashCode()方法得到hashCode值，通过Hash算法运算得到该键值的存储位置。</p>
 </blockquote>
@@ -484,26 +485,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
