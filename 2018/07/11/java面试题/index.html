@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="a-lazy-lunch">
 <meta property="og:description" content="hashtable和hashMap的区别 1.hashtable线程安全，同步，效率相对底下； hashMap线程不安全，非同步，效率相对gao; 2.hashtable父类是Dictionary,hashMap父类是AbstractMap 3.hashtable键和值不为空，而hashMap键最多一个为空，值可以多个为空java基本数据类型 Java语言提供了八种基本类型：六种数字类型（四个整数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-19T12:02:57.057Z">
+<meta property="og:updated_time" content="2018-07-19T12:49:49.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java面试题">
 <meta name="twitter:description" content="hashtable和hashMap的区别 1.hashtable线程安全，同步，效率相对底下； hashMap线程不安全，非同步，效率相对gao; 2.hashtable父类是Dictionary,hashMap父类是AbstractMap 3.hashtable键和值不为空，而hashMap键最多一个为空，值可以多个为空java基本数据类型 Java语言提供了八种基本类型：六种数字类型（四个整数">
@@ -183,11 +183,11 @@
 <li>Java语言提供了八种基本类型：<br>六种数字类型（四个整数型，两个浮点型）<br>字节型byte 8位 短整型short 16位 整型int 32位<br>长整型long 64位 单精度float 32位 双精度double 64位</li>
 <li>一种字符类型<br>字符型char 8位</li>
 <li>还有一种布尔型<br>布尔型：boolean 8位 可存储”True”和”false”。</li>
+<li>String本身就是一个对象而不是基本数据类型，String的变量名是对String类的引用。</li>
 </ul>
 <a id="more"></a>
-<ul>
-<li>String本身就是一个对象而不是基本数据类型，String的变量名是对String类的引用。<h1 id="字符串的操作"><a href="#字符串的操作" class="headerlink" title="字符串的操作"></a>字符串的操作</h1>写一个方法，实现字符串的反转，如：输入abc，输出cba<br>public static String reverse(String s){<br>int length=s.length();<br>StringBuffer result=new StringBuffer(length);<br>for(int i=length-1;i&gt;=0;i–)<br>result.append(s.charAt(i));<br>return result.toString();<br>}<br>写一个方法，实现字符串的替换，如：输入bbbwlirbbb，输出bbbhhtccc。 String s = “bbbwlirbbb”;<br>s.replaceAll(“wlirbbb”,”hhtccc”);<h1 id="数据类型之间的转换"><a href="#数据类型之间的转换" class="headerlink" title="数据类型之间的转换"></a>数据类型之间的转换</h1>如何将数值型字符转换为数字（Integer，Double）<br>使用Integer.parseInt()和Double.parseDouble()方法。<br>如何将数字转换为字符<br>class my<br>{<br>int a=12;<br>Label label=new Label();<br>label.setText(String.valueOf(a));<br>}<br>如何取小数点前两位，并四舍五入。<br>System.out.println(“四舍五入取整:(3.856)=”</li>
-</ul>
+<h1 id="字符串的操作"><a href="#字符串的操作" class="headerlink" title="字符串的操作"></a>字符串的操作</h1><p>写一个方法，实现字符串的反转，如：输入abc，输出cba<br>public static String reverse(String s){<br>int length=s.length();<br>StringBuffer result=new StringBuffer(length);<br>for(int i=length-1;i&gt;=0;i–)<br>result.append(s.charAt(i));<br>return result.toString();<br>}<br>写一个方法，实现字符串的替换，如：输入bbbwlirbbb，输出bbbhhtccc。 String s = “bbbwlirbbb”;<br>s.replaceAll(“wlirbbb”,”hhtccc”);</p>
+<h1 id="数据类型之间的转换"><a href="#数据类型之间的转换" class="headerlink" title="数据类型之间的转换"></a>数据类型之间的转换</h1><p>如何将数值型字符转换为数字（Integer，Double）<br>使用Integer.parseInt()和Double.parseDouble()方法。<br>如何将数字转换为字符<br>class my<br>{<br>int a=12;<br>Label label=new Label();<br>label.setText(String.valueOf(a));<br>}<br>如何取小数点前两位，并四舍五入。<br>System.out.println(“四舍五入取整:(3.856)=”</p>
 <ul>
 <li>new BigDecimal(i).setScale(2, BigDecimal.ROUND_HALF_UP));<h1 id="日期和时间"><a href="#日期和时间" class="headerlink" title="日期和时间"></a>日期和时间</h1>如何取得年月日，小时分秒<br>Date dat=new Date();<br>dat.getYear(); dat.getMonth(); dat.getDay(); dat.getHours(); dat.getMinutes(); dat.getSeconds();<br>如何取得从1970年到现在的毫秒数<br>long now=dat.getTime();<br>如何获取某个日期是当月的最后一天<br>DateFormate df=DateFormate.getInstance();df.Format(dat);</li>
 </ul>
