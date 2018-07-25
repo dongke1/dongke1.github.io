@@ -16,7 +16,7 @@
 <meta property="og:description" content="1.程序：program,是一个静态的概念 2.进程：process,是一个动态的概念。 进程是程序的一次动态执行过程占用特定的地址空间 每个进程都是独立的，由三部分组成，缺点是内存的浪费，cpu的负担。 3.线程： thread,是进程中的一个“单一的连续控制流程”（也称为轻量级进程） 一个进程可以拥有多个并行的线程； 一个进程中的线程共享相同的内存单元/内存地址，可以访问相同的变量对象，从同">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/s42JzJp.png">
-<meta property="og:updated_time" content="2018-07-24T12:58:49.036Z">
+<meta property="og:updated_time" content="2018-07-25T13:52:52.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多线程">
 <meta name="twitter:description" content="1.程序：program,是一个静态的概念 2.进程：process,是一个动态的概念。 进程是程序的一次动态执行过程占用特定的地址空间 每个进程都是独立的，由三部分组成，缺点是内存的浪费，cpu的负担。 3.线程： thread,是进程中的一个“单一的连续控制流程”（也称为轻量级进程） 一个进程可以拥有多个并行的线程； 一个进程中的线程共享相同的内存单元/内存地址，可以访问相同的变量对象，从同">
@@ -184,9 +184,9 @@
 <li>每个进程都是独立的，由三部分组成，缺点是内存的浪费，cpu的负担。</li>
 <li>3.线程： thread,是进程中的一个“单一的连续控制流程”（也称为轻量级进程）</li>
 <li>一个进程可以拥有多个并行的线程；</li>
-<li>一个进程中的线程共享相同的内存单元/内存地址，可以访问相同的变量对象，从同一个堆中分配对象，通信，数据交换，同步操作；<a id="more"></a>
-</li>
+<li>一个进程中的线程共享相同的内存单元/内存地址，可以访问相同的变量对象，从同一个堆中分配对象，通信，数据交换，同步操作；</li>
 </ul>
+<a id="more"></a>
 <p>进程是资源分配的单位，线程是调度和执行的单位；</p>
 <ul>
 <li>线程创建：</li>
@@ -195,6 +195,16 @@
 <li>5.线程状态：<br><img src="https://i.imgur.com/s42JzJp.png" alt=""></li>
 <li>停止线程：外部干涉（定义一个标记flag=true，使用标记flag)</li>
 <li>阻塞：</li>
+<li>线程同步（并发）多线程访问同意资源，确保资源安全</li>
+<li>synchronize-&gt;同步块</li>
+<li><h1 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h1></li>
+<li>确保一个类只有一个对象</li>
+<li>1.构造器私有化，避免外部直接创建对象</li>
+<li>2.声明一个私有的静态变量</li>
+<li>3.创建一个对外的公共的静态方法访问改变量，如果变量没有对象，创建对象</li>
+<li><h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1></li>
+<li>过多的同步方法会造成死锁（都调用同一份资源不释放）</li>
+<li></li>
 </ul>
 
       
