@@ -153,6 +153,152 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java自学12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/15/java自学12/">正则表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/15/java自学12/" class="archive-article-date">
+  	<time datetime="2018-09-14T16:04:38.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>1.自定义字符匹配用 [ ]中间任意字符。</li>
+<li>2.量词 { n }中间加数量。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2018/09/15/java自学12/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/15/java自学12/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java自学10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/02/java自学10/">jvm深入了解</a>
+    </h1>
+  
+
+        
+        <a href="/2018/09/02/java自学10/" class="archive-article-date">
+  	<time datetime="2018-09-01T16:30:27.212Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java文件被javac编译器编译，Java执行加载class文件。</p>
+<ul>
+<li>将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区中的运行数据结构，在堆中生成这个类的java.lang.Class对象，作为方法区数据的访问入口。</li>
+</ul>
+<blockquote>
+<p>类加载机制为：jvm将class文件加载到内存中，并对数据进行链接（校验：确保加载信息符合jvm信息，准备：设置类变量等static初始值，解析：常量池中的符号引用替换成直接引用），初始化。</p>
+</blockquote>
+<blockquote>
+<p>初始化：执行类构造器方法的过程，类构造器方法又编译器收集。</p>
+</blockquote>
+<blockquote>
+<p>静态域，静态变量是一个意思（field)</p>
+<p>类加载主动引用（一定会发生类的初始化） 被动引用（常量的引用等）则不会发生类的引用</p>
+<p><strong>双亲委派机制（代理模式）：某个类加载器接到类的加载时，首先交给父类，最后在这个类加载器。 </strong><br>类加载器：引导类加载器《– 扩展类加载器《–应用程序类加载器《–自定义类加载器<br>
+        
+          <a class="article-more-a" href="/2018/09/02/java自学10/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/09/02/java自学10/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -322,9 +468,17 @@ NPPR9-FWDCX-D2C8J-H872K-2YT43
       
         <ul>
 <li>注解：用@修饰，例如@override</li>
-<li>反射：可以在运行时加载·探知·使用编译期间未知的类。</li>
+<li><p>（元注解@targe:用于描述注解使用范围)</p>
+</li>
+<li><p>反射：可以在运行时加载·探知·使用编译期间未知的类。（reflection)</p>
+</li>
 <li>程序在运行状态中，可以动态加载一个只有名称的类，对于任意一个以加载的类，都能够知道这个这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性，加载完类之后，在堆内存中，就产生了一个class类型的对象（一个类只有一个class对象），这个对象就包含了完整的类的结构信息。</li>
-<li>我们通过这个对象看到类的机构。这个对象就像一面镜子，透过这个镜子看到类的结构，称为反射。</li>
+<li><p>我们通过这个对象看到类的机构。这个对象就像一面镜子，透过这个镜子看到类的结构，称为反射。</p>
+</li>
+<li><p><strong>setaccessible：禁用安全检查为（true）提高反射运行效率。（大概四倍）</strong></p>
+</li>
+<li>本质：操作编译器 class 文件。</li>
+<li><strong>反射操作泛型，class的对象，注解</strong></li>
 </ul>
 
       
@@ -713,167 +867,6 @@ NPPR9-FWDCX-D2C8J-H872K-2YT43
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/11/java面试题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-比较" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/比较/">TreeSet与TreeMap</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/10/比较/" class="archive-article-date">
-  	<time datetime="2018-07-10T13:47:29.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>TreeSetMap:确保key可以排序或者提供比较器</li>
-<li>确保key可以排序；</li>
-<li>提供key比较器 public TreeMap(comparator&lt;？super k&gt; comparator)</li>
-</ul>
-<blockquote>
-</blockquote>
-<ul>
-<li>TreeSet:</li>
-<li>确保元素实体可以排序</li>
-<li>排序比较器 public TrreSet(comparator&lt;？super k&gt; comparator)</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/比较/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/10/排序/">冒泡排序</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/10/排序/" class="archive-article-date">
-  	<time datetime="2018-07-10T13:40:35.857Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre><code>public static void main(String[] args)
-{
-int [] a={2,4,5,3,1,8,6,9};
-int temp;
-boolean flag=true;
-for(int i=0;i&lt;a.length-1;i++)
-{
-    flag=true;
-    for(int j=0;j&lt;a.length-i-1;j++)
-    {
-        if(a[j]&gt;a[j+1])
-        {
-        temp=a[j];
-        a[j]=a[j+1];
-        a[j+1]=temp;
-        flag=false;
-        }
-    }
-    System.out.println(Arrays.toString(a));
-  if(flag)
-    {
-        break;
-    }
-}
-}
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/10/排序/">展开全文 >></a>
         </p>
       
 

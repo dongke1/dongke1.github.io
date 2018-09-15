@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | a-lazy-lunch</title>
+  <title>jvm深入了解 | a-lazy-lunch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="a-lazy-lunch">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="Java文件被javac编译器编译，Java执行加载class文件。  将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区中的运行数据结构，在堆中生成这个类的java.lang.Class对象，作为方法区数据的访问入口。   类加载机制为：jvm将class文件加载到内存中，并对数据进行链接（校验：确保加载信息符合jvm信息，准备：设置类变量等static初始值，解析：常量池中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jvm深入了解">
+<meta property="og:url" content="http://yoursite.com/2018/09/02/java自学10/index.html">
 <meta property="og:site_name" content="a-lazy-lunch">
+<meta property="og:description" content="Java文件被javac编译器编译，Java执行加载class文件。  将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区中的运行数据结构，在堆中生成这个类的java.lang.Class对象，作为方法区数据的访问入口。   类加载机制为：jvm将class文件加载到内存中，并对数据进行链接（校验：确保加载信息符合jvm信息，准备：设置类变量等static初始值，解析：常量池中的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-02T16:47:04.058Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="a-lazy-lunch">
+<meta name="twitter:title" content="jvm深入了解">
+<meta name="twitter:description" content="Java文件被javac编译器编译，Java执行加载class文件。  将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区中的运行数据结构，在堆中生成这个类的java.lang.Class对象，作为方法区数据的访问入口。   类加载机制为：jvm将class文件加载到内存中，并对数据进行链接（校验：确保加载信息符合jvm信息，准备：设置类变量等static初始值，解析：常量池中的">
   
     <link rel="alternative" href="/atom.xml" title="a-lazy-lunch" type="application/atom+xml">
   
@@ -151,289 +155,182 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java自学10" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/15/java自学12/" class="archive-article-date">
-  	<time datetime="2018-09-14T16:04:38.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/15/java自学12/">正则表达式</a>
+    <h1 class="article-title" itemprop="name">
+      jvm深入了解
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/02/java自学10/" class="archive-article-date">
+        
+        <a href="/2018/09/02/java自学10/" class="archive-article-date">
   	<time datetime="2018-09-01T16:30:27.212Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/02/java自学10/">jvm深入了解</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java文件被javac编译器编译，Java执行加载class文件。</p>
+<ul>
+<li>将class文件字节码内容加载到内存中，并将这些静态数据转换成方法区中的运行数据结构，在堆中生成这个类的java.lang.Class对象，作为方法区数据的访问入口。</li>
+</ul>
+<blockquote>
+<p>类加载机制为：jvm将class文件加载到内存中，并对数据进行链接（校验：确保加载信息符合jvm信息，准备：设置类变量等static初始值，解析：常量池中的符号引用替换成直接引用），初始化。</p>
+</blockquote>
+<blockquote>
+<p>初始化：执行类构造器方法的过程，类构造器方法又编译器收集。</p>
+</blockquote>
+<blockquote>
+<p>静态域，静态变量是一个意思（field)</p>
+<p>类加载主动引用（一定会发生类的初始化） 被动引用（常量的引用等）则不会发生类的引用</p>
+<p><strong>双亲委派机制（代理模式）：某个类加载器接到类的加载时，首先交给父类，最后在这个类加载器。 </strong><br>类加载器：引导类加载器《– 扩展类加载器《–应用程序类加载器《–自定义类加载器<br><a id="more"></a></p>
+</blockquote>
+<ul>
+<li>线程类加载器：（抛弃双亲委派机制）</li>
+<li>OSGI面向java的动态模块系统，提供面向服务和基于组件的运行环境，提供标准的方式管理软件的生命周期</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/02/java自学10/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/补充/" class="archive-article-date">
-  	<time datetime="2018-07-31T13:03:03.803Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2018/09/15/java自学12/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          正则表达式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/31/补充/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">补充知识点</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/补充/">补充知识点</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/win10激活过程/" class="archive-article-date">
-  	<time datetime="2018-07-31T09:23:53.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/Java自学9/" class="archive-article-date">
-  	<time datetime="2018-07-31T07:06:47.572Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/Java自学9/">注解和反射</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/28/java自学8/" class="archive-article-date">
-  	<time datetime="2018-07-28T12:19:01.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/28/java自学8/">http server</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/java自学7/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:21:38.277Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/java自学7/">网络编程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/java自学6/" class="archive-article-date">
-  	<time datetime="2018-07-23T13:24:41.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/java自学6/">多线程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/java自学5/" class="archive-article-date">
-  	<time datetime="2018-07-11T14:44:41.072Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/java自学5/">io流</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/java面试题/" class="archive-article-date">
-  	<time datetime="2018-07-11T14:23:36.223Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/java面试题/">java面试题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -457,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018 | a-lazy-lunch</title>
+  <title>正则表达式 | a-lazy-lunch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="a-lazy-lunch">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+  <meta name="description" content="1.自定义字符匹配用 [ ]中间任意字符。 2.量词 { n }中间加数量。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2018/09/15/java自学12/index.html">
 <meta property="og:site_name" content="a-lazy-lunch">
+<meta property="og:description" content="1.自定义字符匹配用 [ ]中间任意字符。 2.量词 { n }中间加数量。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-15T16:22:01.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="a-lazy-lunch">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="1.自定义字符匹配用 [ ]中间任意字符。 2.量词 { n }中间加数量。">
   
     <link rel="alternative" href="/atom.xml" title="a-lazy-lunch" type="application/atom+xml">
   
@@ -151,289 +155,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-java自学12" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      正则表达式
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/15/java自学12/" class="archive-article-date">
+
+        
+        <a href="/2018/09/15/java自学12/" class="archive-article-date">
   	<time datetime="2018-09-14T16:04:38.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-15</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/15/java自学12/">正则表达式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>1.自定义字符匹配用 [ ]中间任意字符。</li>
+<li>2.量词 { n }中间加数量。</li>
+</ul>
+<a id="more"></a>
+<h1 id="Mysql数据库应用"><a href="#Mysql数据库应用" class="headerlink" title="Mysql数据库应用"></a>Mysql数据库应用</h1><p>将bin目录配置到path后面，用 ；隔开。</p>
+<ul>
+<li>1.建库 create db。</li>
+<li>2.删除库 drop db。</li>
+<li>3.选择库 use db。</li>
+<li>3.建表 create table tb_table。</li>
+<li>4.查表 show tb-table。</li>
+</ul>
+<h2 id="连接数据库："><a href="#连接数据库：" class="headerlink" title="连接数据库："></a>连接数据库：</h2><p>用connection接口：</p>
+<p>Connection conn=DriverManager.getConnection(“jdbc:mysql://localhost:3306/testjdbc”,”root”,”123456”);</p>
+<!-- more -->
+<h2 id="Statement接口："><a href="#Statement接口：" class="headerlink" title="Statement接口："></a>Statement接口：</h2><p>用于执行sql语句返回结果。<br>有三种类：Statement（会有sql注入情况，不安全） preparedStatement </p>
+<p>常用方法：<br>.execute();<br>.executeUpdata();用于返回sql语句影响的行数；<br>.executeQuery();</p>
+<h3 id="使用完数据库要关闭connection-statement"><a href="#使用完数据库要关闭connection-statement" class="headerlink" title="使用完数据库要关闭connection statement"></a>使用完数据库要关闭connection statement</h3><h2 id="批处理："><a href="#批处理：" class="headerlink" title="批处理："></a>批处理：</h2><ul>
+<li>batch</li>
+<li>用Statement类</li>
+<li>.addBatch(“”);</li>
+<li>.executeBatch();</li>
+</ul>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><ul>
+<li>一组同时执行成功，或同时失败的sql语句。</li>
+<li>是一个执行单元。     <h2 id="常用sql语句："><a href="#常用sql语句：" class="headerlink" title="常用sql语句："></a>常用sql语句：</h2></li>
+<li>1.<code>insert into tb_table(name,passward) values (&#39;张三&#39;，?);</code> ？占位符  </li>
+<li>2.<code>delete from tb_table where name=&quot;张三&quot;；</code></li>
+</ul>
+<h2 id="BLOB-和-CLOB"><a href="#BLOB-和-CLOB" class="headerlink" title="BLOB 和 CLOB"></a>BLOB 和 CLOB</h2><p>大文本数据存储，（以流的形式传输存储）</p>
+<h3 id="创建db-properties-资源文件存储数据库连接代码"><a href="#创建db-properties-资源文件存储数据库连接代码" class="headerlink" title="创建db.properties 资源文件存储数据库连接代码"></a>创建db.properties 资源文件存储数据库连接代码</h3><h2 id="ORM思想"><a href="#ORM思想" class="headerlink" title="ORM思想"></a>ORM思想</h2><p>表结构与类对应，（mysql为关系型数据库）    </p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/09/15/java自学12/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/02/java自学10/" class="archive-article-date">
-  	<time datetime="2018-09-01T16:30:27.212Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/09/02/java自学10/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jvm深入了解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/02/java自学10/">jvm深入了解</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/补充/" class="archive-article-date">
-  	<time datetime="2018-07-31T13:03:03.803Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/补充/">补充知识点</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/win10激活过程/" class="archive-article-date">
-  	<time datetime="2018-07-31T09:23:53.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/31/Java自学9/" class="archive-article-date">
-  	<time datetime="2018-07-31T07:06:47.572Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-31</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/31/Java自学9/">注解和反射</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/28/java自学8/" class="archive-article-date">
-  	<time datetime="2018-07-28T12:19:01.136Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/28/java自学8/">http server</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/26/java自学7/" class="archive-article-date">
-  	<time datetime="2018-07-26T12:21:38.277Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/java自学7/">网络编程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/23/java自学6/" class="archive-article-date">
-  	<time datetime="2018-07-23T13:24:41.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/23/java自学6/">多线程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/java自学5/" class="archive-article-date">
-  	<time datetime="2018-07-11T14:44:41.072Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/java自学5/">io流</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/java面试题/" class="archive-article-date">
-  	<time datetime="2018-07-11T14:23:36.223Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/java面试题/">java面试题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -457,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
